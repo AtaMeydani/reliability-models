@@ -1,0 +1,540 @@
+{
+  "settings": {
+    "mission_time": 500,
+    "horizon": 2500,
+    "time_points": 101,
+    "simulations": 5000
+  },
+  "scenarios": [
+    {
+      "name": "series_norepair_noccf",
+      "topology": "Series",
+      "parameters": {
+        "n": 3
+      },
+      "nodes": {
+        "C0": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        },
+        "C1": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        },
+        "C2": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        }
+      },
+      "ccf_groups": []
+    },
+    {
+      "name": "series_norepair_ccf",
+      "topology": "Series",
+      "parameters": {
+        "n": 3
+      },
+      "nodes": {
+        "C0": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        },
+        "C1": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        },
+        "C2": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        }
+      },
+      "ccf_groups": [
+        {
+          "name": "Heat",
+          "affected_nodes": [
+            "C0",
+            "C1"
+          ],
+          "common_rate": 0.0001
+        }
+      ]
+    },
+    {
+      "name": "1_of_2_norepair_noccf",
+      "topology": "M-of-N",
+      "parameters": {
+        "m": 1,
+        "n": 2
+      },
+      "nodes": {
+        "C0": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        },
+        "C1": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        }
+      },
+      "ccf_groups": []
+    },
+    {
+      "name": "1_of_2_norepair_ccf",
+      "topology": "M-of-N",
+      "parameters": {
+        "m": 1,
+        "n": 2
+      },
+      "nodes": {
+        "C0": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        },
+        "C1": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        }
+      },
+      "ccf_groups": [
+        {
+          "name": "Heat",
+          "affected_nodes": [
+            "C0",
+            "C1"
+          ],
+          "common_rate": 0.0001
+        }
+      ]
+    },
+    {
+      "name": "2_of_3_norepair_noccf",
+      "topology": "M-of-N",
+      "parameters": {
+        "m": 2,
+        "n": 3
+      },
+      "nodes": {
+        "C0": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        },
+        "C1": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        },
+        "C2": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        }
+      },
+      "ccf_groups": []
+    },
+    {
+      "name": "2_of_3_norepair_ccf",
+      "topology": "M-of-N",
+      "parameters": {
+        "m": 2,
+        "n": 3
+      },
+      "nodes": {
+        "C0": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        },
+        "C1": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        },
+        "C2": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        }
+      },
+      "ccf_groups": [
+        {
+          "name": "Heat",
+          "affected_nodes": [
+            "C0",
+            "C1"
+          ],
+          "common_rate": 0.0001
+        }
+      ]
+    },
+    {
+      "name": "wheatstone_bridge_norepair_noccf",
+      "topology": "Wheatstone Bridge",
+      "parameters": {},
+      "nodes": {
+        "C1": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        },
+        "C2": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        },
+        "C3": {
+          "lam": 0.002,
+          "mu": 0.0,
+          "capacity": 1.0
+        },
+        "C4": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        },
+        "C5": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        }
+      },
+      "ccf_groups": []
+    },
+    {
+      "name": "wheatstone_bridge_norepair_ccf",
+      "topology": "Wheatstone Bridge",
+      "parameters": {},
+      "nodes": {
+        "C1": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        },
+        "C2": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        },
+        "C3": {
+          "lam": 0.002,
+          "mu": 0.0,
+          "capacity": 1.0
+        },
+        "C4": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        },
+        "C5": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        }
+      },
+      "ccf_groups": [
+        {
+          "name": "Heat",
+          "affected_nodes": [
+            "C1",
+            "C2"
+          ],
+          "common_rate": 0.0001
+        },
+        {
+          "name": "Vibration",
+          "affected_nodes": [
+            "C3",
+            "C4"
+          ],
+          "common_rate": 0.0005
+        }
+      ]
+    },
+    {
+      "name": "series_repair_noccf",
+      "topology": "Series",
+      "parameters": {
+        "n": 3
+      },
+      "nodes": {
+        "C0": {
+          "lam": 0.001,
+          "mu": 0.0005,
+          "capacity": 1.0
+        },
+        "C1": {
+          "lam": 0.001,
+          "mu": 0.0005,
+          "capacity": 1.0
+        },
+        "C2": {
+          "lam": 0.001,
+          "mu": 0.0005,
+          "capacity": 1.0
+        }
+      },
+      "ccf_groups": []
+    },
+    {
+      "name": "series_repair_ccf",
+      "topology": "Series",
+      "parameters": {
+        "n": 3
+      },
+      "nodes": {
+        "C0": {
+          "lam": 0.001,
+          "mu": 0.0005,
+          "capacity": 1.0
+        },
+        "C1": {
+          "lam": 0.001,
+          "mu": 0.0005,
+          "capacity": 1.0
+        },
+        "C2": {
+          "lam": 0.001,
+          "mu": 0.0005,
+          "capacity": 1.0
+        }
+      },
+      "ccf_groups": [
+        {
+          "name": "Heat",
+          "affected_nodes": [
+            "C0",
+            "C1"
+          ],
+          "common_rate": 0.0001
+        }
+      ]
+    },
+    {
+      "name": "1_of_2_repair_noccf",
+      "topology": "M-of-N",
+      "parameters": {
+        "m": 1,
+        "n": 2
+      },
+      "nodes": {
+        "C0": {
+          "lam": 0.001,
+          "mu": 0.0005,
+          "capacity": 1.0
+        },
+        "C1": {
+          "lam": 0.001,
+          "mu": 0.0005,
+          "capacity": 1.0
+        }
+      },
+      "ccf_groups": []
+    },
+    {
+      "name": "1_of_2_repair_ccf",
+      "topology": "M-of-N",
+      "parameters": {
+        "m": 1,
+        "n": 2
+      },
+      "nodes": {
+        "C0": {
+          "lam": 0.001,
+          "mu": 0.0005,
+          "capacity": 1.0
+        },
+        "C1": {
+          "lam": 0.001,
+          "mu": 0.0005,
+          "capacity": 1.0
+        }
+      },
+      "ccf_groups": [
+        {
+          "name": "Heat",
+          "affected_nodes": [
+            "C0",
+            "C1"
+          ],
+          "common_rate": 0.0001
+        }
+      ]
+    },
+    {
+      "name": "2_of_3_repair_noccf",
+      "topology": "M-of-N",
+      "parameters": {
+        "m": 2,
+        "n": 3
+      },
+      "nodes": {
+        "C0": {
+          "lam": 0.001,
+          "mu": 0.0005,
+          "capacity": 1.0
+        },
+        "C1": {
+          "lam": 0.001,
+          "mu": 0.0005,
+          "capacity": 1.0
+        },
+        "C2": {
+          "lam": 0.001,
+          "mu": 0.0005,
+          "capacity": 1.0
+        }
+      },
+      "ccf_groups": []
+    },
+    {
+      "name": "2_of_3_repair_ccf",
+      "topology": "M-of-N",
+      "parameters": {
+        "m": 2,
+        "n": 3
+      },
+      "nodes": {
+        "C0": {
+          "lam": 0.001,
+          "mu": 0.0005,
+          "capacity": 1.0
+        },
+        "C1": {
+          "lam": 0.001,
+          "mu": 0.0005,
+          "capacity": 1.0
+        },
+        "C2": {
+          "lam": 0.001,
+          "mu": 0.0005,
+          "capacity": 1.0
+        }
+      },
+      "ccf_groups": [
+        {
+          "name": "Heat",
+          "affected_nodes": [
+            "C0",
+            "C1"
+          ],
+          "common_rate": 0.0001
+        }
+      ]
+    },
+    {
+      "name": "wheatstone_bridge_repair_noccf",
+      "topology": "Wheatstone Bridge",
+      "parameters": {},
+      "nodes": {
+        "C1": {
+          "lam": 0.001,
+          "mu": 0.0005,
+          "capacity": 1.0
+        },
+        "C2": {
+          "lam": 0.001,
+          "mu": 0.0005,
+          "capacity": 1.0
+        },
+        "C3": {
+          "lam": 0.002,
+          "mu": 0.001,
+          "capacity": 1.0
+        },
+        "C4": {
+          "lam": 0.001,
+          "mu": 0.0005,
+          "capacity": 1.0
+        },
+        "C5": {
+          "lam": 0.001,
+          "mu": 0.0005,
+          "capacity": 1.0
+        }
+      },
+      "ccf_groups": []
+    },
+    {
+      "name": "wheatstone_bridge_repair_ccf",
+      "topology": "Wheatstone Bridge",
+      "parameters": {},
+      "nodes": {
+        "C1": {
+          "lam": 0.001,
+          "mu": 0.0005,
+          "capacity": 1.0
+        },
+        "C2": {
+          "lam": 0.001,
+          "mu": 0.0005,
+          "capacity": 1.0
+        },
+        "C3": {
+          "lam": 0.002,
+          "mu": 0.001,
+          "capacity": 1.0
+        },
+        "C4": {
+          "lam": 0.001,
+          "mu": 0.0005,
+          "capacity": 1.0
+        },
+        "C5": {
+          "lam": 0.001,
+          "mu": 0.0005,
+          "capacity": 1.0
+        }
+      },
+      "ccf_groups": [
+        {
+          "name": "Heat",
+          "affected_nodes": [
+            "C1",
+            "C2"
+          ],
+          "common_rate": 0.0001
+        },
+        {
+          "name": "Vibration",
+          "affected_nodes": [
+            "C3",
+            "C4"
+          ],
+          "common_rate": 0.0005
+        }
+      ]
+    },
+    {
+      "name": "load_sharing",
+      "topology": "M-of-N",
+      "parameters": {
+        "m": 1,
+        "n": 2
+      },
+      "load_sharing_factor": 5.0,
+      "nodes": {
+        "C0": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        },
+        "C1": {
+          "lam": 0.001,
+          "mu": 0.0,
+          "capacity": 1.0
+        }
+      },
+      "ccf_groups": []
+    }
+  ]
+}

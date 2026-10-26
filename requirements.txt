@@ -1,0 +1,6 @@
+# Runtime dependencies
+numpy==2.4.0
+scipy==1.16.0
+matplotlib==3.10.8
+networkx==3.5
+pgmpy==1.0.0
